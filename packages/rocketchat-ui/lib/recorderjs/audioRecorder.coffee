@@ -28,7 +28,7 @@
 		if cb?
 			@getBlob cb
 
-      try @stream.stop() # bug: the stop function is not exists! so I(riceball) added the `try`
+		try @stream.stop() # bug: the stop function is not exists! so I(riceball) added the `try`
 
 		@recorder.clear()
 
