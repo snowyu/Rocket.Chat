@@ -898,12 +898,19 @@ label.required::after {
 	}
 }
 
+.avatar:hover {
+  transition: ease-out 0.2s;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
 .avatar {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	border-radius: 4px;
+	border-radius: 50%;
+	/*border-radius: 4px;*/
+        transition: linear 0.25s;
 
 	.emoji,
 	.emojione {
@@ -918,6 +925,7 @@ label.required::after {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+                border-radius: 50%;
 	}
 
 	&[initials]::before {
