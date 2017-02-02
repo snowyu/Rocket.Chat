@@ -19,7 +19,7 @@ alphaColors=
 # Major colors form the core of the scheme
 # Names changed to reflect usage, comments show pre-refactor names
 majorColors=
-  'content-background-color': '#FFFFFF'
+  'content-background-color': '@transparent-lightest'
   'primary-background-color': '#04436A'
   'primary-font-color': '#444444'
   'primary-action-color': '#13679A' # was action-buttons-color

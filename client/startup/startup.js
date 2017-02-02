@@ -2,6 +2,21 @@
 
 import moment from 'moment';
 import toastr from 'toastr';
+//import vegas from 'vegas';
+import 'vegas';
+import 'vegas/dist/vegas.min.css';
+
+$(function() {
+	$('body').vegas({
+		transition: 'random',
+		overlay: true,
+		slides: [
+			{ src: 'https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg' },
+			{ src: 'https://static.vecteezy.com/system/resources/previews/000/106/719/original/vector-abstract-blue-wave-background.jpg' },
+			{ src: 'http://www.hdbloggers.net/wp-content/uploads/2016/09/Pink-Pictures-HD-Backgrounds.jpg' }
+		]
+	});
+});
 
 if (window.DISABLE_ANIMATION) {
 	toastr.options.timeOut = 1;
