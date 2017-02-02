@@ -132,6 +132,23 @@ Meteor.methods({
 				$options: 'i'
 			};
 		}
+
+		// Query for tags --via riceball
+		var tags = [];
+    text = text.replace(/tag:([\w\x7f-\ufaff]+)|(".+"|'.+'|“.+”|‘.+’|`.+`)/ig, function(match, tag, tagQuote) {
+      if (tagQuote) {
+        tag = tagQuote.slice(1, tagQuote.length-1);
+      }
+      tags.push(tag);
+      return '';
+    });
+		if (tags.length > 0) {
+			query['tags'] = {
+				$all: tags,
+				$options: 'i'
+			};
+		}
+
 		// Filter on messages that are starred by the current user.
 		text = text.replace(/has:star/g, filterStarred);
 		// Filter on messages that have an url.

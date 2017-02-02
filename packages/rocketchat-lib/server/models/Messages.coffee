@@ -17,6 +17,8 @@ RocketChat.models.Messages = new class extends RocketChat.models._Base
 		@tryEnsureIndex { 'location': '2dsphere' }
 		@tryEnsureIndex { 'slackBotId': 1, 'slackTs': 1 }, { sparse: 1 }
 
+		@tryEnsureIndex { 'tags': 1 } # added via riceball
+
 	# FIND
 	findByMention: (username, options) ->
 		query =
