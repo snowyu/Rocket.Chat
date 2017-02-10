@@ -5,6 +5,7 @@
 	arrow = {}
 	animating = false
 	openQueue = []
+	meNav = {}
 
 	toggleArrow = (status = null) ->
 		if status is 0
@@ -21,7 +22,7 @@
 			arrow.removeClass "bottom"
 
 	toggleCurrent = ->
-		if flexNav.opened then closeFlex() else AccountBox.toggle()
+		if flexNav.opened then closeFlex() else sideNav.toggle() #AccountBox.toggle()
 
 	overArrow = ->
 		arrow.addClass "hover"
@@ -96,9 +97,10 @@
 		}
 
 	init = ->
-		sideNav = $(".side-nav")
+		meNav =   $("#side-nav-me")
+		sideNav = $("#side-nav")
 		flexNav = sideNav.find ".flex-nav"
-		arrow = sideNav.children ".arrow"
+		arrow = meNav.children ".arrow"
 		setFlex ""
 		arrowBindHover()
 		initiated = true
@@ -112,6 +114,9 @@
 
 	getSideNav = ->
 		return sideNav
+
+	getFlexNav = ->
+		return flexNav
 
 	init: init
 	setFlex: setFlex
