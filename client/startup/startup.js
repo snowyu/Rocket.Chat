@@ -2,6 +2,7 @@
 
 import moment from 'moment';
 import toastr from 'toastr';
+
 //import vegas from 'vegas';
 import 'vegas';
 import 'vegas/dist/vegas.min.css';
@@ -17,6 +18,11 @@ $(function() {
 		]
 	});
 });
+
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
+
+hljs.initHighlightingOnLoad();
 
 if (window.DISABLE_ANIMATION) {
 	toastr.options.timeOut = 1;
