@@ -2900,9 +2900,7 @@
 	position: relative;
 
 	min-height: 40px;
-	padding: 8px 20px 4px 70px;
-
-	transition: background 0.3s;
+	padding: 8px 50px 4px 70px;
 
 	line-height: 20px;
 
@@ -3026,16 +3024,16 @@
 
 	& .thumb {
 		position: absolute;
-		left: 20px;
+		left: 24px;
 
 		display: block;
 
-		width: 40px;
-		height: 40px;
+		width: 36px;
+		height: 36px;
 
 		&:not(.thumb-small) .avatar {
-			width: 40px;
-			height: 40px;
+			width: 36px;
+			height: 36px;
 		}
 
 		&.thumb-small {
@@ -3126,10 +3124,6 @@
 			}
 		}
 
-		& .body {
-			margin-top: 0;
-		}
-
 		&:hover .edited {
 			display: none;
 		}
@@ -3160,8 +3154,6 @@
 	}
 
 	& .body {
-		margin-top: 2px;
-
 		transition: opacity 1s linear;
 
 		opacity: 1;
@@ -3220,6 +3212,55 @@
 			& button {
 				display: block;
 			}
+		}
+
+		& ul,
+		& ol {
+			padding: 0 0 0 24px;
+		}
+
+		& ul {
+			list-style-type: disc;
+		}
+
+		& ol {
+			list-style-type: decimal;
+		}
+
+		& > * + * {
+			padding-top: 10px;
+		}
+
+		& > table {
+			display: block;
+			overflow: auto;
+
+			& tr {
+				background-color: #ffffff;
+				border-top: 1px solid #cccccc;
+
+				&:nth-child(2n) {
+					background-color: #f6f8fa;
+				}
+
+				& th {
+					font-weight: 600;
+				}
+
+				& th,
+				& td {
+					padding: 6px 13px;
+					border: 1px solid #dddddd;
+				}
+			}
+		}
+
+		& > hr {
+			height: 3px;
+			padding: 0;
+			margin: 12px 0;
+			background-color: #e7e7e7;
+			border: 0;
 		}
 	}
 
@@ -3586,17 +3627,11 @@ body:not(.is-cordova) {
 				width: 21px;
 				height: 20px;
 
-				border-radius: 50%;
-
 				& i {
 					display: inline-block;
 
 					width: 18px;
 					height: 18px;
-
-					border-width: 1px;
-					border-style: solid;
-					border-radius: 50%;
 
 					font-size: 10px;
 				}
@@ -4116,6 +4151,8 @@ body:not(.is-cordova) {
 
 			width: var(--user-image-square);
 			height: var(--user-image-square);
+
+			margin-left: 1rem;
 		}
 	}
 
@@ -5648,6 +5685,10 @@ body:not(.is-cordova) {
 	transition: transform 0.15s cubic-bezier(0.5, 0, 0.1, 1), visibility 0.15s cubic-bezier(0.5, 0, 0.1, 1);
 
 	border-bottom: 1px solid;
+
+	&.message:hover {
+		background-color: #ffffff;
+	}
 
 	&.animated-hidden {
 		visibility: hidden;
