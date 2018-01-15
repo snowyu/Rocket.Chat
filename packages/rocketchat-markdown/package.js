@@ -6,13 +6,12 @@ Package.describe({
 });
 
 Npm.depends({
-	'marked': '0.3.6'
+	'marked': '0.3.9'
 });
 
 Package.onUse(function(api) {
 	api.use([
 		'ecmascript',
-		'underscore',
 		'templating',
 		'rocketchat:lib'
 	]);
